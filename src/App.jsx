@@ -1,5 +1,5 @@
 import "./App.css";
-import { Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Layout from "./Components/Layout/Layout";
 import Home from "./Pages/Home";
 import About from "./Pages/About";
@@ -9,7 +9,7 @@ import Room from "./Pages/VideoCall/Room";
 
 function App() {
   return (
-    <>
+    <BrowserRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
@@ -17,7 +17,7 @@ function App() {
         <Route path="/room" element={<Room />} />
         <Route path="/video/:id" element={<VideoCall />} />
       </Routes>
-    </>
+    </BrowserRouter>
   );
 }
 
